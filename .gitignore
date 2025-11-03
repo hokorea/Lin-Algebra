@@ -53,3 +53,43 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# =========================
+# VS Code specific (개발 환경 설정)
+# =========================
+.vscode/
+*.code-workspace
+
+# =========================
+# Output directories (빌드 결과물 저장 디렉토리)
+# =========================
+bin/
+build/
+Debug/
+Release/
+x64/
+x86/
+
+# =========================
+# OS-specific files (운영체제 자동 생성)
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs & temp files (로그 및 임시파일)
+# =========================
+*.log
+*.tmp
+*.bak
+*.swp
+
+# =========================
+# CMake / Make / IDE cache (툴 관련 캐시)
+# =========================
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.mk
