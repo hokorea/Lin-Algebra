@@ -11,6 +11,7 @@ void swap_rows(int R, int C, double A[R][C], int i, int j){
 
 // Type 2: R_i에 k를 곱함 (k != 0)
 void scale_row(int R, int C, double A[R][C], int i, double k){
+    if (k == 0) return;
     for (int j = 0; j < C; j++){
         A[i][j] *= k;
     }
