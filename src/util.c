@@ -1,5 +1,8 @@
 #include "util.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+
 void print_matrix(int rows, int cols, double M[rows][cols]) {
     printf("===================\n");
     for (int i = 0; i < rows; i++) {

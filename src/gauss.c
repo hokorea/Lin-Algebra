@@ -1,5 +1,8 @@
 #include "gauss.h"
 
+#include "util.h"
+#include "ero.h"
+
 // OPTIMIZE:
 // NOTE: 부분 피벗팅 적용
 void to_ref(int rows, int cols, double M[rows][cols]) {
@@ -13,16 +16,13 @@ void to_ref(int rows, int cols, double M[rows][cols]) {
                 max_row = j;
             }
         }
-
         // --- 2. 피벗 행 교환 ---
         if (max_row != i)
             swap_rows(rows, cols, M, i, max_row);
-
         // --- 3. 피벗 행 정규화 ---
         pivot = M[i][i];
         if (!is_zero(pivot))
             scale_row(rows, cols, M, i, 1.0 / pivot);
-
         // --- 4. 아래 행 소거 ---
         for (int j = i + 1; j < rows; j++) {
             double factor = M[j][i];
