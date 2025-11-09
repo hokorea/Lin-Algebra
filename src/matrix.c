@@ -38,3 +38,11 @@ int multiply_matrices(int M, int N, int P, double A[M][N], double B[N][P], doubl
         
     return 1;
 }
+
+void copy_matrix(int rows, int cols, double A[rows][cols], double B[rows][cols]){
+    for (int i = 0; i < rows; i++){
+        for (int j = 0; j < cols; j++){
+            B[i][j] = A[i][j];
+        }
+    }
+}

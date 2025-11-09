@@ -13,4 +13,7 @@ void transpose_matrix(int rows, int cols, double A[rows][cols], double T[cols][r
 // 행렬 곱셈 (C = A * B). 성공 시 1, 실패(차원 조건 불만족) 시 0 반환.
 int multiply_matrices(int M, int N, int P, double A[M][N], double B[N][P], double C[M][P]);
 
+// 행렬 복사 (깊은 복사를 위한 함수)
+void copy_matrix(int rows, int cols, double A[rows][cols], double B[rows][cols]);
+
 #endif
